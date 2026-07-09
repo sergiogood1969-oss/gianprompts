@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body { margin: 0; padding: 15px; font-family: -apple-system, Segoe UI, Arial, sans-serif; background: #fff; }
+.prompt-box { position: relative; background: #f4f6f8; border: 1px solid #e1e4e8; border-radius: 8px; padding: 45px 20px 20px; }
+#promptText { white-space: pre-wrap; word-wrap: break-word; font-size: 14px; line-height: 1.6; color: #24292e; }
+.copy-btn { position: absolute; top: 10px; right: 10px; background: #0366d6; color: white; border: none; border-radius: 6px; padding: 6px 14px; cursor: pointer; font-size: 13px; font-weight: 500; }
+.copy-btn:hover { background: #0256b3; }
+.copy-btn.copied { background: #28a745; }
+</style>
+</head>
+<body>
+<div class="prompt-box">
+  <button class="copy-btn" onclick="copyPrompt()">Копировать</button>
+  <div id="promptText">Hyper-realistic high-end commercial studio photograph, vertical 9:16 aspect ratio, 
+shot on Canon EOS R5 with 50mm f/1.4 lens, soft diffused natural studio lighting 
+from the left, minimal shadows, bright and airy pastel aesthetic, dreamy summer 
+mood, product photography style similar to Instagram lifestyle brands.
+
+BACKGROUND: Seamless clean cream-white paper backdrop (#F5F0E8), soft gradient, 
+no textures, no distractions, glossy white floor with subtle reflection of objects.
+
+MAIN OBJECT (LEFT SIDE, occupying 55% of frame):
+A GIANT oversized waffle ice cream cone, approximately 2 meters tall, standing 
+upright and slightly tilted toward the girl. The waffle cone has a rich golden-brown 
+color with a perfectly detailed criss-cross waffle texture, crispy realistic edges, 
+slightly darker toasted tips. On top of the cone sit THREE massive scoops of 
+ice cream stacked vertically:
+- Bottom scoop: pastel strawberry pink ice cream with visible tiny strawberry chunks
+- Middle scoop: soft mint green ice cream with dark chocolate chips
+- Top scoop: creamy vanilla white ice cream with visible vanilla bean specks
+The scoops are perfectly round, glossy, with realistic frosty texture. Melted 
+ice cream drips slowly flow down the sides of the cone in creamy streams — pink, 
+mint, and white drops running down the golden waffle surface, some pooling at 
+the base. The top scoop is decorated with colorful rainbow sprinkles (pink, blue, 
+yellow, green), a glossy red maraschino cherry with a green stem on top, and 
+a small mint leaf.
+
+MODEL (RIGHT SIDE, occupying 40% of frame):
+A beautiful young woman from refernce - 100% exact replica of the reference face and skin), sun-kissed tan skin, long wavy dark brown hair loosely gathered in a soft high 
+ponytail with a few face-framing strands, natural glowing makeup with rosy cheeks 
+and glossy nude-pink lips, delicate gold hoop earrings, thin gold necklace.
+
+She stands gracefully leaning her back and shoulder against the giant cone, 
+weight on one leg, the other leg crossed over slightly, creating an elegant 
+S-curve pose. Her head is tilted down toward the small ice cream in her hand, 
+eyes softly closed, lips gently touching the ice cream with a blissful, joyful 
+half-smile.
+
+OUTFIT: A soft pastel mint-green (or baby pink alternative) mini summer dress 
+with puff short sleeves, sweetheart square neckline, fitted bodice with elastic 
+smocked waist, flowy A-line skirt ending mid-thigh, made of light cotton fabric 
+with subtle sheen. On her feet: clean white low-top canvas sneakers with white 
+ankle socks (or white leather sandals).
+
+IN HER HAND: A small real waffle cone with a single scoop of matching pastel 
+pink strawberry ice cream, held delicately with both hands near her face, 
+a tiny drip running down her thumb.
+
+PROPS ON THE FLOOR (foreground, bottom of frame):
+- 3-4 empty golden waffle cones scattered on their sides
+- A scoop of colorful rainbow sprinkles spilled in a small pile
+- A vintage silver ice cream scoop with wooden handle
+- A few melted ice cream drops on the floor (pink and mint)
+- One extra maraschino cherry with stem
+- A small pastel pink ceramic bowl with extra sprinkles
+- A folded pastel striped napkin (pink and white stripes)
+
+COLOR PALETTE: Soft pastels — cream white, mint green, baby pink, golden 
+caramel, touches of red (cherry) and rainbow (sprinkles). Overall warm, 
+inviting, feminine summer vibe.
+
+LIGHTING: Bright soft key light from upper left, gentle fill light, no harsh 
+shadows, slight rim light on the model's hair, dreamy soft focus in background, 
+sharp focus on model and giant cone, shallow depth of field on floor props.
+
+STYLE: Professional commercial photography, editorial magazine quality, 
+similar to Aerie, Glossier, or Sephora summer campaigns, playful oversized 
+prop aesthetic, hyperrealistic textures, ultra-detailed, 8K resolution, 
+photorealistic, no cartoon elements.
+
+--ar 9:16 --style raw --v 6.1 --q 2 --s 250 --no cartoon, illustration, 
+3D render, anime, painting, drawing, watercolor, sketch
+</div>
+</div>
+<script>
+function copyPrompt() {
+  const text = document.getElementById('promptText').innerText;
+  const btn = document.querySelector('.copy-btn');
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ Скопировано';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 1500);
+  });
+}
+</script>
+</body>
+</html>
